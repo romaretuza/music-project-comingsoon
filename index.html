@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>В разработке</title>
+    <style>
+        /* Подключаем каноничный пиксельный шрифт */
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden; /* Запрещаем скролл, всё строго по центру */
+            font-family: 'Press Start 2P', monospace; /* Тот самый пиксельный шрифт */
+        }
+
+        /* Центрирующий контейнер */
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Стиль для глаза */
+        .art-image {
+            max-width: 300px; /* Размер глаза на ПК */
+            width: 80%;       /* Адаптивность для телефонов */
+            height: auto;
+            margin-bottom: 30px;
+            
+            /* Эффект плавного проявления при входе на сайт */
+            animation: fadeIn 3s ease-in-out forwards;
+        }
+
+        /* Мелкая пиксельная надпись */
+        .text {
+            color: #555555; /* Приглушенный серый цвет, чтобы не резало глаза */
+            font-size: 10px; /* Очень мелкий шрифт */
+            letter-spacing: 2px;
+            text-transform: lowercase;
+            text-decoration: none;
+            transition: color 0.5s ease;
+        }
+
+        /* Эффект при наведении на надпись */
+        .text:hover {
+            color: #ffffff; /* Текст становится белым */
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Легкое свечение */
+        }
+
+        /* Анимация проявления */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Подгонка под мобильные экраны */
+        @media (max-width: 480px) {
+            .art-image {
+                max-width: 200px; /* На смартфонах глаз будет чуть компактнее */
+            }
+            .text {
+                font-size: 8px; /* Надпись еще чуть меньше */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <img src="eye.jpg" alt="eye" class="art-image">
+        
+        <div class="text">coming soon...</div>
+    </div>
+
+</body>
+</html>
